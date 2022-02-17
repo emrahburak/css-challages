@@ -1,62 +1,60 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 
 html,body {
-    height: 100vh;
-}
-
-body > * {
-    text-align: center;
-
-}
-
-
-.flex-layout {
-    display: flex;
-    flex-flow:column nowrap;
-
     height: 100%;
 }
 
-.flex-container {
+.container {
     display: flex;
-    flex-flow: row wrap;
-    height: 100%;
+    flex-wrap: wrap;
+    height: calc(100% - 70px);
 
 }
 
-.header, .footer {
+header {
     width: 100%;
-    height: 4rem;
-    background: #eeee;
+    height: 70px;
+    border-bottom: 1px solid #ddd;
+
 }
+
+
+
 
 .aside {
-    flex-basis: 100px;
-    background: burlywood;
-    flex-shrink: 1;
-}
+    width: 250px;
+    border-right: 1px solid #ddd;
+    flex-shrink: 0;
 
-.flex-main {
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.aside button {
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+}
+
+.aside .button {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.main {
     flex-grow: 1;
+    overflow: auto;
+    height: 100%;
+    padding: 25px;
 }
-
-.article {
-    flex-grow: 1;
-    padding: 2rem;
-}
-
-.flex-main:nth-child(1){
-    background: black;
-}
-
-
-
 
 /*# sourceMappingURL=index.de101254.css.map */
