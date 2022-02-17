@@ -10,49 +10,67 @@ html,body {
     height: 100%;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+html,body {
+    height: 100%;
+}
+
+
 .container {
     display: flex;
     flex-wrap: wrap;
-    height: calc(100% - 70px);
-
 }
 
-header {
+
+.navigation {
     width: 100%;
-    height: 70px;
     border-bottom: 1px solid #ddd;
 
+    background: black;
 }
 
 
-
-
-.aside {
-    width: 250px;
-    border-right: 1px solid #ddd;
-    flex-shrink: 0;
-
+.navigation ul {
     display: flex;
-    flex-direction: column;
-    padding: 20px;
+    flex-wrap: nowrap;
+    color: white;
+
+    /* justify-content: space-around; */
 }
 
-.aside button {
-    text-align: left;
-    border: 1px solid #ddd;
-    padding: 5px 10px;
-}
+.navigation li {
+    list-style: none;
 
-.aside .button {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-}
-
-.main {
     flex-grow: 1;
-    overflow: auto;
-    height: 100%;
-    padding: 25px;
 }
+.navigation a {
+    display: block;
+    /* flex-basis: 50px; */
+    padding: 1em;
+}
+
+.navigation li input {
+
+    width: 100%;
+}
+
+.navigation ul:nth-child(){}
+
+.navigation a:not(.logo) {
+    opacity: .7;
+}
+
+.navigation a:hover {
+    opacity: 1;
+}
+
+
+
+
