@@ -71,6 +71,51 @@ html,body {
     opacity: 1;
 }
 
+.content {
+    flex-grow: 1;
+    flex-direction: column;
+
+}
+
+.sidebar {
+    width: 300px;
+    position: relative;
+    flex-direction: column;
+    border-left: 1px solid #ddd;
+    padding-top: 20px;
+
+
+    display: flex;
+}
+
+.cart {
+    padding: 15px;
+
+}
+
+.sidebar .cart span {
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul {
+    margin-top: 10px;
+}
+
+.sidebar li {
+    list-style: none;
+}
+
+.cart .cart-link {
+    margin-top: 20px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.sidebar .button-group {
+    justify-content: flex-end;
+}
+
+
 
 
 
