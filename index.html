@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav></nav>
+      </header>
+      <main class="main-content">main</main>
+      <aside class="sidebar">
+        <!-- <ul id="cart-list"></ul> -->
+      </aside>
+    </div>
+  </body>
+  <script type="text/javascript">
+      const ul = document.createElement("ul");
+    const li = document.createElement("li");
+
+    li.className = "cart";
+
+    const text = document.createTextNode("new item");
+
+    li.appendChild(text);
+    const cartlist = document.querySelector("#cart-list");
+    [...Array(20).keys()].forEach((x) => {
+      cartlist.appendChild(li);
+    });
+
+    console.log(ul);
+  </script>
+</html>
