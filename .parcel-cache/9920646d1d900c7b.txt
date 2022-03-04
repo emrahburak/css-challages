@@ -1,0 +1,8 @@
+7
+56C:\Users\EMRAH\Documents\Newborn\Css\css-challanges\dist132908882660812420 1
+61C:\Users\EMRAH\Documents\Newborn\Css\css-challanges\README.md132896834847550002 0
+62C:\Users\EMRAH\Documents\Newborn\Css\css-challanges\index.html132907899286371424 0
+61C:\Users\EMRAH\Documents\Newborn\Css\css-challanges\style.css132907900343887585 0
+75C:\Users\EMRAH\Documents\Newborn\Css\css-challanges\dist\index.de101254.css132908882660732439 0
+67C:\Users\EMRAH\Documents\Newborn\Css\css-challanges\dist\index.html132908882660732439 0
+79C:\Users\EMRAH\Documents\Newborn\Css\css-challanges\dist\index.de101254.css.map132908882660802413 0

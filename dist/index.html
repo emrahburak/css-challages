@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.de101254.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav></nav>
+      </header>
+      <main class="main-content">main</main>
+      <aside class="sidebar">
+      </aside>
+    </div>
+  </body>
+  <script type="text/javascript">let sidebar = document.querySelector(".sidebar");
+let ul = document.createElement("ul");
+const cartItem = (name)=>{
+    let cartItem1 = document.createElement('li');
+    let cartTitle = document.createElement('a');
+    let cartImage = document.createElement('div');
+    // li.textContent = name;
+    cartItem1.className = "cart";
+    cartItem1.style.listStyle = "none";
+    cartTitle.textContent = name;
+    cartImage.className = "cart-image";
+    cartTitle.className = "cart-title";
+    cartItem1.appendChild(cartImage);
+    cartItem1.appendChild(cartTitle);
+    return cartItem1;
+};
+sidebar.appendChild(ul);
+[
+    ...Array(30).keys()
+].forEach((x)=>{
+    ul.appendChild(cartItem(`${x + 1} - item`));
+});
+
+</script>
+</html>
