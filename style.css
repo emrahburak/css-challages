@@ -37,5 +37,27 @@ header {
 }
 
 
+.cart {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #dddd;
+    justify-content: flex-start;
+    /* align-items: center; */
+}
+
+.cart-image {
+    flex-basis: 90px;
+    height: 100%;
+    border-right: 1px solid #dddd;
+    background-color:darkgray;
+}
+
+.cart-title {
+    flex-grow: 1;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
 
 

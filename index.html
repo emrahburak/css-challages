@@ -14,24 +14,38 @@
       </header>
       <main class="main-content">main</main>
       <aside class="sidebar">
-        <!-- <ul id="cart-list"></ul> -->
       </aside>
     </div>
   </body>
   <script type="text/javascript">
-      const ul = document.createElement("ul");
-    const li = document.createElement("li");
+    let sidebar = document.querySelector(".sidebar");
+    let ul = document.createElement("ul");
+    
 
-    li.className = "cart";
+    const cartItem = (name) => {
+      let cartItem = document.createElement('li');
+      let cartTitle = document.createElement('a');
+      let cartImage = document.createElement('div');
+      // li.textContent = name;
+      cartItem.className = "cart";
+      cartItem.style.listStyle = "none";
 
-    const text = document.createTextNode("new item");
+      cartTitle.textContent = name;
 
-    li.appendChild(text);
-    const cartlist = document.querySelector("#cart-list");
-    [...Array(20).keys()].forEach((x) => {
-      cartlist.appendChild(li);
+      cartImage.className = "cart-image";
+      cartTitle.className = "cart-title";
+
+      cartItem.appendChild(cartImage);
+      cartItem.appendChild(cartTitle);
+      return cartItem;
+    }
+
+    sidebar.appendChild(ul);
+
+    [...Array(30).keys()].forEach((x) => {
+
+      ul.appendChild(cartItem(`${(x + 1)} - item`));
     });
 
-    console.log(ul);
   </script>
 </html>
