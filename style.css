@@ -79,11 +79,12 @@ html,body {
 
 
 .our-story-card {
-  position: relative;
-  border-bottom: 8px solid #222;
+  /* position: relative; */
   margin-bottom: 0;
   color: #fff;
   padding: 70px 45px;
+  border-bottom: 8px solid #222;
+
 }
 
 .our-story-card .our-story-card-background {
