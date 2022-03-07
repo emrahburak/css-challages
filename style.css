@@ -75,3 +75,36 @@ html,body {
   width: 83px;
   background: #e50914;
 }
+
+
+.our-story-card {
+  /* position: relative; */
+  border-bottom: 8px solid #222;
+  margin-bottom: 0;
+  color: #fff;
+  background-image: initial;
+}
+
+.our-story-card .our-story-card-background {
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: -100px;
+  overflow: hidden;
+}
+
+/* .our-story-card-background .img-wrapper {
+  position: absolute;
+  top:0;
+  right: 0;
+  left: 0;
+} */
+
+.our-story-card-background .img-wrapper .our-story-card-image {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
