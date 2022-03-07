@@ -17,7 +17,8 @@ html,body {
 .header-wrapper {
   width: 100%;
   height: 84px;
-  border-bottom: 1px solid #222;
+  background: transparent;
+  transition: .5s background;
   max-width: 1290px;
   margin: 0 auto;
   position: relative;
@@ -78,11 +79,11 @@ html,body {
 
 
 .our-story-card {
-  /* position: relative; */
+  position: relative;
   border-bottom: 8px solid #222;
   margin-bottom: 0;
   color: #fff;
-  background-image: initial;
+  padding: 70px 45px;
 }
 
 .our-story-card .our-story-card-background {
@@ -95,12 +96,12 @@ html,body {
   overflow: hidden;
 }
 
-/* .our-story-card-background .img-wrapper {
+.our-story-card-background .img-wrapper {
   position: absolute;
   top:0;
   right: 0;
   left: 0;
-} */
+}
 
 .our-story-card-background .img-wrapper .our-story-card-image {
 
