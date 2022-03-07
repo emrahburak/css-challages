@@ -9,25 +9,27 @@ html,body{
   height: 100%;
 }
 
-
-.our-story-card {
-  position: relative;
-  top:60px;
-  left: 40px;
-  width: 600px;
-  height: 500px;
-  background: gray;
-  z-index: 0;
+.container {
+  width: 100%;
+  /* overflow-x: hidden; */
 }
 
-.our-story-background {
+.container .our-story-card {
+  position: relative;
+  width: 600px;
+  background: gray;
+  height: 400px;
+}
+
+.container .our-story-background {
   position: absolute;
   top: -30px;
   left: 0;
+  right: 0;
+  bottom: 0;
   height: 100px;
   width: 100px;
   background: palevioletred;
-  z-index: 1;
 
 }
 
