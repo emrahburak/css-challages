@@ -1,0 +1,33 @@
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,body{
+  height: 100%;
+}
+
+
+.our-story-card {
+  position: relative;
+  top:60px;
+  left: 40px;
+  width: 600px;
+  height: 500px;
+  background: gray;
+  z-index: 0;
+}
+
+.our-story-background {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  height: 100px;
+  width: 100px;
+  background: palevioletred;
+  z-index: 1;
+
+}
+
