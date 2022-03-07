@@ -9,12 +9,69 @@ html,body {
 }
 
 .container {
-    display: flex;
-    flex-flow: column wrap;
 
     height: 100%;
 }
 
-.header-wrapper {
 
+.header-wrapper {
+  width: 100%;
+  height: 84px;
+  border-bottom: 1px solid #222;
+  max-width: 1290px;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 20px 0px 0px;
+}
+
+.header-wrapper header {
+  position: relative;
+  border: 1px solid #222;
+  margin: 0 3.5rem;
+  height: auto;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.header-wrapper header .logo-wrapper {
+  display: inline-block;
+  padding: 5px 5px 0px;
+}
+
+.logo-wrapper img {
+  width: 134px;
+  height: 36px;
+
+}
+
+.header-wrapper header .btn-wrapper {
+  height: auto;
+  width: 230px ;
+  border: 1px solid #222;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-wrapper select {
+  width: 92px;
+  height: auto;
+
+  appearance: none;
+}
+.btn-wrapper a {
+  display: block;
+  height: auto;
+  width: 83px;
+  background: #e50914;
 }
