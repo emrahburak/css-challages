@@ -79,11 +79,12 @@ html,body {
 
 
 .our-story-card {
-  /* position: relative; */
+  position: relative;
   margin-bottom: 0;
   color: #fff;
   padding: 70px 45px;
   border-bottom: 8px solid #222;
+  font-family: Arial, Helvetica, sans-serif;
 
 }
 
@@ -102,6 +103,7 @@ html,body {
   top:0;
   right: 0;
   left: 0;
+  bottom: 0;
 }
 
 .our-story-card-background .img-wrapper .our-story-card-image {
@@ -127,4 +129,84 @@ html,body {
     rgba(0, 0, 0, 0) 60%,
     rgba(0, 0, 0, 0.8) 100%
   );
+}
+
+
+.our-story-card-text {
+  position: relative;
+  width: 100%;
+  max-width: 950px;
+  padding: 75px 0;
+  z-index: 1;
+  margin: 0 auto;
+  text-align: center;
+
+  font-size: 1.625rem;
+  font-weight: 400;
+}
+
+.our-story-card-text h1, .our-story-card-text h2 {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+
+.our-story-card-title {
+  font-size: 3.125rem;
+
+}
+
+.our-story-card-subtitle {
+  font-size: 1.625rem;
+  margin: 1rem auto;
+}
+
+.our-story-card-text .email-form {
+  max-width: 950px;
+  padding: 0.80rem;
+
+  display: flex;
+  flex-direction: column;
+}
+.our-story-card-text .email-form .email-form-title {
+  max-width: none;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 0 5%;
+  padding-bottom: 20px;
+
+  font-weight: 400;
+}
+
+.our-story-card-text .email-form .email-form-group {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.email-form-group input {
+  width: 450px;
+  height: 60px;
+  max-width: 500px;
+  position: relative;
+  margin: 0;
+  padding: 0 1em;
+  font-size: 1.2rem;
+}
+
+
+
+.email-form-group a {
+  display: inline-block;
+  background: #e50914;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.email-form-group a span {
+  font-size: 1.625rem;
+  min-height: 60px;
+  line-height: 60px;
 }
