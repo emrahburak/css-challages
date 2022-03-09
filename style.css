@@ -1,24 +1,23 @@
 * {
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html,body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 .container {
-
-    height: 100%;
+  height: 100%;
 }
-
 
 .header-wrapper {
   width: 100%;
   height: 84px;
   background: transparent;
-  transition: .5s background;
+  transition: 0.5s background;
   max-width: 1290px;
   margin: 0 auto;
   position: relative;
@@ -35,12 +34,12 @@ html,body {
   border: 1px solid #222;
   margin: 0 3.5rem;
   height: auto;
-  
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .header-wrapper header .logo-wrapper {
@@ -51,12 +50,11 @@ html,body {
 .logo-wrapper img {
   width: 134px;
   height: 36px;
-
 }
 
 .header-wrapper header .btn-wrapper {
   height: auto;
-  width: 230px ;
+  width: 230px;
   border: 1px solid #222;
 
   display: flex;
@@ -64,19 +62,34 @@ html,body {
   align-items: center;
 }
 
-.btn-wrapper select {
+.btn-wrapper select.lang-selectbox {
+  appearance: none;
+
+  font-size: 14px;
   width: 92px;
   height: auto;
-
-  appearance: none;
+  background: rgba(0, 0, 0, 0.4)
+    url(./image/white-24dp/1x/outline_arrow_drop_down_white_24dp.png) no-repeat
+    right;
+  color: #fff;
+  padding: 8px 22px;
 }
+
 .btn-wrapper a {
-  display: block;
-  height: auto;
   width: 83px;
+  height: 32px;
   background: #e50914;
+  display: inline-block;
+  cursor: pointer;
 }
 
+.btn-wrapper a .btn-signin {
+  padding: 7px 14px;
+  color: #fff;
+  font-weight: 400;
+  min-height: 32px;
+  line-height: 32px;
+}
 
 .our-story-card {
   position: relative;
@@ -85,7 +98,6 @@ html,body {
   padding: 70px 45px;
   border-bottom: 8px solid #222;
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .our-story-card .our-story-card-background {
@@ -100,14 +112,13 @@ html,body {
 
 .our-story-card-background .img-wrapper {
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
   left: 0;
   bottom: 0;
 }
 
 .our-story-card-background .img-wrapper .our-story-card-image {
-
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -131,7 +142,6 @@ html,body {
   );
 }
 
-
 .our-story-card-text {
   position: relative;
   width: 100%;
@@ -145,15 +155,14 @@ html,body {
   font-weight: 400;
 }
 
-.our-story-card-text h1, .our-story-card-text h2 {
+.our-story-card-text h1,
+.our-story-card-text h2 {
   max-width: 640px;
   margin: 0 auto;
 }
 
-
 .our-story-card-title {
   font-size: 3.125rem;
-
 }
 
 .our-story-card-subtitle {
@@ -163,7 +172,7 @@ html,body {
 
 .our-story-card-text .email-form {
   max-width: 950px;
-  padding: 0.80rem;
+  padding: 0.8rem;
 
   display: flex;
   flex-direction: column;
@@ -194,9 +203,23 @@ html,body {
   margin: 0;
   padding: 0 1em;
   font-size: 1.2rem;
+  outline: none;
 }
 
+.email-form-group input::placeholder {
+  position: absolute;
+  top: 18px;
+  left: 20px;
 
+  transition: 250ms top ease, 250ms left ease;
+}
+
+.email-form-group input:focus::placeholder {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  font-size: 0.8rem;
+}
 
 .email-form-group a {
   display: inline-block;
@@ -210,3 +233,23 @@ html,body {
   min-height: 60px;
   line-height: 60px;
 }
+
+.our-story-card .animation-card-watchOnTv {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+}
+
+
+.our-story-card .animation-card-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: black;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+
