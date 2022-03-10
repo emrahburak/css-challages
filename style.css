@@ -387,10 +387,11 @@ body {
   width: 100%;
   border: 0;
   color: #fff;
-  background: url(./image/plus/2x/outline_add_white_24dp.png) no-repeat right;
 
-  display: block;
-  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   background: #303030;
 
   text-transform: none;
