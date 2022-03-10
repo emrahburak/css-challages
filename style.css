@@ -258,7 +258,6 @@ body {
   z-index: 3;
 }
 
-
 .our-story-card-img-container {
   width: 48%;
   height: 100%;
@@ -266,14 +265,11 @@ body {
   flex: 0 1 auto;
 }
 
-
-
 .our-story-card-animation-container {
   position: relative;
   overflow: hidden;
   margin: -10% -5% -5% 0;
 }
-
 
 .animation-card-img {
   position: relative;
@@ -286,7 +282,7 @@ body {
   border: 0;
 }
 
-.our-story-card-animation {
+.our-story-card.animation-card-watchOnTv .our-story-card-animation {
   width: 100%;
   height: 100%;
   max-width: 80%;
@@ -294,16 +290,17 @@ body {
   position: absolute;
   top: 42px;
   left: 48px;
-
 }
-
 
 .our-story-card-video {
   width: 100%;
   height: 100%;
 }
 
-.download-and-watch .our-story-card-img-container .our-story-card-animation-container .our-story-card-animation {
+.download-and-watch
+  .our-story-card-img-container
+  .our-story-card-animation-container
+  .our-story-card-animation {
   position: absolute;
   padding: 0.5em 0.75em;
   left: 50%;
@@ -317,9 +314,9 @@ body {
   width: 100%;
   max-width: 25em;
   max-height: 7em;
-  border: 2px solid rgba(255,255,255,.25);
+  border: 2px solid rgba(255, 255, 255, 0.25);
   border-radius: 0.75em;
-  }
+}
 
 .our-story-card-animation-image {
   width: 51px;
@@ -339,14 +336,64 @@ body {
 }
 
 .our-story-card-animation-text .text-1 {
-  font-size: .9em;
+  font-size: 0.9em;
   font-weight: 400;
   color: #0071eb;
-
 }
 
-/* video {
-  display: inline-block;
-  vertical-align: baseline;
-  object-fit: contain;
-} */
+.watch-on-device .our-story-card-img {
+  position: relative;
+  z-index: 2;
+}
+.our-story-card
+  .animation-card-watchOnTv
+  .watch-on-device
+  .animation-card-container
+  .our-story-card-animation {
+  width: 100%;
+  height: 100%;
+  max-width: 53%;
+  max-height: 47%;
+  position: relative;
+}
+
+#converted-gif {
+  position: absolute;
+  top: 25%;
+  left: 60%;
+  width: 33%;
+}
+
+.faq-card {
+  background: #000;
+  text-align: center;
+}
+
+.faq-card .faq-list {
+  max-width: 815px;
+  margin: 2em auto;
+}
+
+.faq-list li {
+  list-style-type: none;
+  margin: 0 0 8px 0;
+}
+
+.faq-list li button {
+  padding: 0.8em 2.2em 0.8em 1.2em;
+  margin-bottom: 1px;
+  font-weight: 400;
+  position: relative;
+  width: 100%;
+  border: 0;
+  color: #fff;
+  background: url(./image/plus/2x/outline_add_white_24dp.png) no-repeat right;
+
+  display: block;
+  text-align: left;
+  background: #303030;
+
+  text-transform: none;
+  overflow: visible;
+  cursor: pointer;
+}
