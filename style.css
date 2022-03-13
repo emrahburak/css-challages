@@ -425,6 +425,8 @@ body {
   transition: 250ms all;
 }
 
+
+
 .faq-list li .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -432,8 +434,16 @@ body {
   transition: 250ms max-height;
 }
 
-.faq-list li button:focus  img {
+/* .faq-list li button:focus  img {
   transform: rotate(-45deg);
+} */
+
+.rotate-on {
+  transform: rotate(-45deg);
+}
+
+.rotate-off {
+  transform: rotate(90deg)
 }
 
 

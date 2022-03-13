@@ -177,7 +177,7 @@
           <h1 class="our-story-card-title">Frequently Asked Questions</h1>
           <ul class="faq-list">
             <li>
-              <button>
+              <button class="btn-faq">
                 What is NetflixClone
                 <img src="./image/plus/2x/outline_add_white_24dp.png" alt="" />
               </button>
@@ -194,7 +194,7 @@
               </div>
             </li>
             <li>
-              <button>
+              <button class="btn-faq">
                 <span class="faq-title">much does NetflixClone cost?</span>
 
                 <img src="./image/plus/2x/outline_add_white_24dp.png" alt="" />
@@ -209,7 +209,7 @@
               </div>
             </li>
             <li>
-              <button>
+              <button class="btn-faq">
                 <span class="faq-title">Where can I watch?</span>
 
                 <img src="./image/plus/2x/outline_add_white_24dp.png" alt="" />
@@ -225,7 +225,7 @@
               </div>
             </li>
             <li>
-              <button>
+              <button class="btn-faq">
                 <span class="faq-title"> How do I cancel? </span>
 
                 <img src="./image/plus/2x/outline_add_white_24dp.png" alt="" />
@@ -240,7 +240,7 @@
               </div>
             </li>
             <li>
-              <button>
+              <button id="btn-faq">
                 <span class="faq-title">
                   What can I watch on NetflixClone?
                 </span>
@@ -257,7 +257,7 @@
               </div>
             </li>
             <li>
-              <button>
+              <button class="btn-faq ">
                 Is NetflixClone good for Kids?
 
                 <img src="./image/plus/2x/outline_add_white_24dp.png" alt="" />
@@ -323,5 +323,27 @@
         </div>
       </footer>
     </div>
+    <script>
+      let status = false;
+      const buttons = document.querySelectorAll(".btn-faq").forEach(element => {
+        element.addEventListener('click', () => {
+          // element.style.transform = 
+          // element.style.transform === "rotate(-45)" ?  "rotate(-45)" : "rotate(90)";
+          if(element.children[0].classList.length === 0){
+              element.children[0].classList.add('rotate-on')
+              element.nextElementSibling.style.maxHeight = "500px"
+
+
+              // console.log(element.nextElementSibling.style.maxHeight )
+          }else {
+              element.children[0].classList.remove('rotate-on')
+              element.nextElementSibling.style.maxHeight = "0"
+          }
+
+
+        });
+      });
+
+    </script>
   </body>
 </html>
