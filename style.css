@@ -8,3 +8,17 @@ html,
 body {
   height: 100%;
 }
+
+.image {
+  width: 1000px;
+  position: relative;
+  margin: 50px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .image img {
+  width: 50%;
+} */
