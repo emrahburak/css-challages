@@ -20,8 +20,8 @@
 
 
   .header-wrapper {
-    padding: 2rem;
-    background: purple;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    background: #ffffff;
     grid-column: 1 /4;
   }
 
@@ -31,7 +31,7 @@
     grid-column: 1 / 4;
 
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     gap: 2rem;
   }

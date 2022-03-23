@@ -1,7 +1,7 @@
-import Header from "../components/header";
-import MainContent from "../components/main-content";
-import LeftSideBar from "../components/left-sidebar";
-import RightSideBar from "../components/right-sidebar";
+import Header from "../components/Header";
+import MainContent from "../components/MainContent";
+import LeftSideBar from "../components/LeftSidebar";
+import RightSideBar from "../components/RightSidebar";
 
 const HomePage = () => {
   return (

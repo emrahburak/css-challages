@@ -1,5 +1,5 @@
 
-import Card from './card';
+import Card from '../Card';
 
 const LeftSidBar = () => {
     return(

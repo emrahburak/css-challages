@@ -1,6 +1,6 @@
 
-import Banner from './banner';
-import Navigation from './navigation';
+import Banner from '../Banner';
+import Navigation from '../Navigation';
 
 
 const MainContent = () => {
