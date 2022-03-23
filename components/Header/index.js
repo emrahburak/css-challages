@@ -1,4 +1,6 @@
 import styles from "./Header.module.scss";
+import Image from 'next/image';
+import onedio from './xonedio.png';
 
 const Header = () => {
   return (
@@ -11,10 +13,12 @@ const Header = () => {
           </label>
         </li>
         <li>
+          <span></span>
           <a>Başlık Oluştur</a>
         </li>
         <li>
-          <a>alert</a>
+          <a></a>
+          <a></a>
         </li>
         <li>
           <a>message</a>
@@ -22,7 +26,9 @@ const Header = () => {
         <li>
           <a>Giriş Yap / Kaydol</a>
         </li>
-        <li></li>
+        <li>
+          <Image src={onedio} width="78px" height="20px"/>
+        </li>
       </ul>
     </header>
   );
