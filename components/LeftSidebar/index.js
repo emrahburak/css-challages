@@ -3,12 +3,12 @@ import Card from '../Card';
 
 const LeftSidBar = () => {
     return(
-        <aside className="left-sidebar">
+        <div >
             left-sidebar
             <Card/>
             <Card/>
             <Card/>
-        </aside>
+        </div>
     )
 }
 

@@ -3,7 +3,7 @@ import Card from '../Card';
 
 const RightSideBar = () => {
     return(
-        <aside>
+        <aside className='right-sidebar'>
             right-sidebar
             <Card/>
             <Card/>

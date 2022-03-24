@@ -11,9 +11,15 @@ const HomePage = () => {
           <Header />
         </div>
         <div className="content-wrapper">
-          <LeftSideBar />
-          <MainContent />
-          <RightSideBar />
+          <div className="left-wrapper">
+            <LeftSideBar />
+          </div>
+          <div className="main-wrapper">
+            <MainContent />
+          </div>
+          <div className="right-wrapper">
+            <RightSideBar />
+          </div>
         </div>
       </div>
     </>
