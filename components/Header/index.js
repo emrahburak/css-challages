@@ -1,12 +1,11 @@
 import styles from "./Header.module.scss";
-import Image from 'next/image';
-import onedio from './xonedio.png';
 
 const Header = () => {
   return (
     <header className={styles.header}>
+      <div></div>
 
-      <ul className={styles.flex}>
+      <ul>
         <li>
           <label>
             <input type="text" placeholder="Ne aramak istiyorsun?"></input>
@@ -21,15 +20,10 @@ const Header = () => {
           <a></a>
         </li>
         <li>
-          <a>message</a>
-        </li>
-        <li>
           <a>Giriş Yap / Kaydol</a>
         </li>
-        <li>
-          <Image src={onedio} width="78px" height="20px"/>
-        </li>
       </ul>
+      <div></div>
     </header>
   );
 };
