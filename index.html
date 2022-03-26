@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="container"></div>
     
+    <script>
+        const bg = document.getElementById("container");
+        let count = 20;
+
+        debugger;
+        for(let i = 0; i < count; i++) {
+            let glitchBox = document.createElement('div');
+            glitchBox.className = "box";
+            bg.appendChild(glitchBox);
+        }
+    </script>
 </body>
 </html>
