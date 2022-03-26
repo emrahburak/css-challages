@@ -4,7 +4,7 @@ import Card from '../Card';
 const LeftSidBar = () => {
     return(
         <div >
-            left-sidebar
+            Kim Ne dio?
             <Card/>
             <Card/>
             <Card/>
