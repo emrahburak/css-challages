@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div id="container"></div>
-    
-    <script>
-        const bg = document.getElementById("container");
-        let count = 20;
 
-        debugger;
-        for(let i = 0; i < count; i++) {
-            let glitchBox = document.createElement('div');
-            glitchBox.className = "box";
-            bg.appendChild(glitchBox);
-        }
+    <script>
+      const bg = document.getElementById("container");
+      let count = 20;
+
+      for (let i = 0; i < count; i++) {
+        let glitchBox = document.createElement("div");
+        glitchBox.className = "box";
+        bg.appendChild(glitchBox);
+      }
+
+      let glitches = document.getElementsByClassName("box");
+
+      setInterval(() => {
+        [...glitches].forEach((element) => {
+          element.style.left = Math.floor(Math.random() * 100) + "vw";
+          element.style.top = Math.floor(Math.random() * 100) + "vh";
+          element.style.width = Math.floor(Math.random() * 400) + "px";
+          element.style.height = Math.floor(Math.random() * 100) + "px";
+          element.style.backgroundPosition = Math.floor(Math.random() * 70) + "px";
+        });
+      },200);
     </script>
-</body>
+  </body>
 </html>
