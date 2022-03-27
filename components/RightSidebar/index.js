@@ -3,13 +3,13 @@ import Card from '../Card';
 
 const RightSideBar = () => {
     return(
-        <aside className='right-sidebar'>
-            right-sidebar
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-        </aside>
+        <div className='right-sidebar'>
+            {
+                [...Array(2)].map((index,pos) => (
+                    <Card key={pos} appearance={"right"}/>
+                ))
+            }
+        </div>
     )
 }
 

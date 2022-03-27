@@ -5,9 +5,12 @@ const LeftSidBar = () => {
     return(
         <div >
             Kim Ne dio?
-            <Card/>
-            <Card/>
-            <Card/>
+
+            {
+                [...Array(1)].map((item,pos) => (
+                    <Card key={pos} appearance={"left"}/>
+                ))
+            }
         </div>
     )
 }

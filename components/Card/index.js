@@ -1,11 +1,17 @@
-import styles from './Card.module.scss';
+import cn from "classnames";
+import styles from "./Card.module.scss";
 
-
-const Card = () => {
+const Card = ({ appearance, children, ...props }) => {
   return (
-    <article className="card">
+    <article
+      className={cn(
+        styles.base,
+        appearance === "left" ? styles.left : undefined,
+        appearance === "right" ? styles.right : undefined
+      )}
+    >
       <div>
-        <p>Name</p>
+        <p>{appearance}</p>
         <a>up</a>
         <a>down</a>
         <a>number</a>
@@ -31,6 +37,7 @@ const Card = () => {
         fanny pack pitchfork pork belly. Fashion axe kitsch mlkshk, tofu
         gentrify YOLO drinking vinegar.
       </div>
+      {children}
     </article>
   );
 };
