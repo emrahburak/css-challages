@@ -1,14 +1,9 @@
-import Image from 'next/image';
+import Image from "next/image";
 import cn from "classnames";
 import styles from "./Card.module.scss";
 
-const myLoader = ({src}) => {
-  return `${src}`
-
-}
-
 const Card = ({ appearance, children, ...props }) => {
-  const {post } = props;
+  const { post } = props;
   return (
     <div
       className={cn(
@@ -19,46 +14,27 @@ const Card = ({ appearance, children, ...props }) => {
     >
       {appearance === "left" ? (
         <div>
+          <div>
+            <div className="image-wrapper">
 
-          <Image loader={myLoader} src={`${post.picture.large}`} width={30} height={30}/>
-          <div>{post.user_name}</div>
+            <Image src={post.picture.large} width={30} height={30}  className="card-image" />
+            </div>
+            <ul>
+              <li>{post.user_name}</li>
+              <li>{post.like}</li>
+            </ul>
+          </div>
+          <p>{post.title}</p>
+          <p>{post.post}</p>
+          
         </div>
       ) : appearance === "right" ? (
         <div>{children}</div>
       ) : (
         <div>{children}</div>
       )}
-
-
-      {/* <div>
-        <p>{appearance}</p>
-        <a>up</a>
-        <a>down</a>
-        <a>number</a>
-      </div>
-      <div>
-        I'm baby heirloom drinking vinegar pop-up ramps. Raw denim irony hella
-        palo santo. Franzen hashtag edison bulb pork belly, tote bag chia
-        everyday carry microdosing. Kinfolk lyft literally, plaid kale chips
-        ramps drinking vinegar normcore kombucha etsy subway tile before they
-        sold out sustainable chia pop-up.
-      </div>
-
-      <div>
-        Bespoke lomo kombucha flexitarian tote bag brooklyn retro schlitz shabby
-        chic swag meditation hoodie vexillologist messenger bag pork belly. Palo
-        santo XOXO austin poke live-edge offal kickstarter irony. Flannel
-        organic YOLO tattooed. Hashtag fingerstache portland before they sold
-        out locavore photo booth, heirloom pour-over. Farm-to-table pickled four
-        dollar toast succulents deep v marfa hot chicken forage flannel
-        chillwave ethical pitchfork. Tilde lo-fi mustache irony shaman meh
-        brooklyn hell of readymade occupy try-hard. Pinterest thundercats
-        stumptown coloring book retro authentic hell of try-hard pabst swag
-        fanny pack pitchfork pork belly. Fashion axe kitsch mlkshk, tofu
-        gentrify YOLO drinking vinegar.
-      </div>
-      {children} */}
     </div>
+
   );
 };
 

@@ -37,7 +37,7 @@ export async function getStaticProps(){
 
   const posts = await res_posts.json();
   const users = await res_users.json();
-  // console.log(typeof(users.results))
+
   users.results.map((index,pos) => {
     if((pos + 1) === posts[pos].id) {
       new_list.push({...posts[pos],picture:index.picture})
