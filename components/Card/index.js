@@ -1,16 +1,36 @@
+import Image from 'next/image';
 import cn from "classnames";
 import styles from "./Card.module.scss";
 
+const myLoader = ({src}) => {
+  return `${src}`
+
+}
+
 const Card = ({ appearance, children, ...props }) => {
+  const {post } = props;
   return (
-    <article
+    <div
       className={cn(
         styles.base,
         appearance === "left" ? styles.left : undefined,
         appearance === "right" ? styles.right : undefined
       )}
     >
-      <div>
+      {appearance === "left" ? (
+        <div>
+
+          <Image loader={myLoader} src={`${post.picture.large}`} width={30} height={30}/>
+          <div>{post.user_name}</div>
+        </div>
+      ) : appearance === "right" ? (
+        <div>{children}</div>
+      ) : (
+        <div>{children}</div>
+      )}
+
+
+      {/* <div>
         <p>{appearance}</p>
         <a>up</a>
         <a>down</a>
@@ -37,8 +57,8 @@ const Card = ({ appearance, children, ...props }) => {
         fanny pack pitchfork pork belly. Fashion axe kitsch mlkshk, tofu
         gentrify YOLO drinking vinegar.
       </div>
-      {children}
-    </article>
+      {children} */}
+    </div>
   );
 };
 
