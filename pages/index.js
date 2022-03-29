@@ -4,7 +4,6 @@ import LeftSideBar from "../components/LeftSidebar";
 import RightSideBar from "../components/RightSidebar";
 
 const HomePage = ({posts}) => {
-  console.log(posts)
   return (
     <>
       <div className="layout-container">
@@ -31,6 +30,7 @@ export default HomePage;
 
 
 export async function getStaticProps(){
+
   const res_users = await fetch("https://randomuser.me/api/?results=50");
   const res_posts = await fetch("http://localhost:3001/posts");
   const new_list = []

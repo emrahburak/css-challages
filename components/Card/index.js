@@ -2,6 +2,10 @@ import Image from "next/image";
 import cn from "classnames";
 import styles from "./Card.module.scss";
 
+const sentenceReducer = sentence => {
+  return sentence.length >= 50 ? `${sentence.slice(0,50)}...` : sentence;
+}
+
 const Card = ({ appearance, children, ...props }) => {
   const { post } = props;
   return (
@@ -15,18 +19,16 @@ const Card = ({ appearance, children, ...props }) => {
       {appearance === "left" ? (
         <div>
           <div>
-            <div className="image-wrapper">
-
-            <Image src={post.picture.large} width={30} height={30}  className="card-image" />
-            </div>
+            <Image src={post.picture.large} width={30} height={30} />
             <ul>
               <li>{post.user_name}</li>
               <li>{post.like}</li>
             </ul>
           </div>
-          <p>{post.title}</p>
-          <p>{post.post}</p>
-          
+          <article>
+            <p>{sentenceReducer(post.title)}</p>
+            <p>{sentenceReducer(post.post)}</p>
+          </article>
         </div>
       ) : appearance === "right" ? (
         <div>{children}</div>
@@ -34,7 +36,6 @@ const Card = ({ appearance, children, ...props }) => {
         <div>{children}</div>
       )}
     </div>
-
   );
 };
 

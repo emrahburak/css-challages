@@ -1,14 +1,24 @@
 import Card from "../Card";
-import {useState} from 'react';
 
 const LeftSidBar = ({ posts }) => {
   return (
     <div>
-      Kim Ne dio?
+      <p>
+        Kim Ne dio?
+      </p>
       {posts.map((post, pos) => {
         if (post.like >= 200)
           return <Card key={post.id} appearance={"left"} post={post} />;
       })}
+
+      <style jsx>{`
+        p {
+          color:rgba(252,57,55,1);
+        }
+
+        
+        `}
+      </style>
     </div>
   );
 };
