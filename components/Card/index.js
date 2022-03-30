@@ -31,7 +31,8 @@ const Card = ({ appearance, children, ...props }) => {
           </article>
         </div>
       ) : appearance === "right" ? (
-        <div>{children}</div>
+        <div>
+        </div>
       ) : (
         <div>{children}</div>
       )}

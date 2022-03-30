@@ -1,17 +1,16 @@
+import Card from "../Card";
 
-import Card from '../Card';
+const RightSideBar = ({ posts }) => {
+  return (
+    <div className="right-sidebar">
+          {posts.map((post, pos) => {
+        if (post.like >= 220)
+          return <Card key={post.id} appearance={"right"} post={post} />;
+      })}
 
-const RightSideBar = () => {
-    return(
-        <div className='right-sidebar'>
-            {
-                [...Array(2)].map((index,pos) => (
-                    <Card key={pos} appearance={"right"}/>
-                ))
-            }
-        </div>
-    )
-}
 
+    </div>
+  );
+};
 
 export default RightSideBar;

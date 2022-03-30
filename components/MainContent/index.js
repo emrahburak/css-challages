@@ -1,12 +1,12 @@
 import Banner from "../Banner";
 import Card from "../Card";
-import Navigation from "../Navigation";
+import CheckboxComponent from "../CheckboxComponent";
 
-const MainContent = () => {
+const MainContent = ({posts,checkboxItems}) => {
   return (
     <main className="main-content">
       <Banner />
-      <Navigation />
+      <CheckboxComponent/>
       {[...Array(2)].map((index, pos) => (
         <Card key={pos} status={"main-content"} />
       ))}

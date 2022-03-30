@@ -2,8 +2,14 @@ import Header from "../components/Header";
 import MainContent from "../components/MainContent";
 import LeftSideBar from "../components/LeftSidebar";
 import RightSideBar from "../components/RightSidebar";
+import CheckboxComponent from "../components/CheckboxComponent";
 
-const HomePage = ({posts}) => {
+
+import {CheckboxItems} from '../utils/CheckboxItems';
+
+
+
+const HomePage = ({posts,files}) => {
   return (
     <>
       <div className="layout-container">
@@ -15,9 +21,10 @@ const HomePage = ({posts}) => {
             <LeftSideBar  posts={posts} />
           </div>
           <div className="main-wrapper">
-            <MainContent posts={posts}  />
+            <MainContent posts={posts} />
           </div>
           <div className="right-wrapper">
+            <CheckboxComponent appearance={"right-checkbox"} checkboxItems={CheckboxItems.leftCheckbox} />
             <RightSideBar  posts={posts} />
           </div>
         </div>
@@ -48,7 +55,7 @@ export async function getStaticProps(){
 
   return {
     props: {
-      posts: new_list
+      posts: new_list,
     }
   }
 }
