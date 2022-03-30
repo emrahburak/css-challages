@@ -34,7 +34,7 @@ const Card = ({ appearance, children, ...props }) => {
         <div>
         </div>
       ) : (
-        <div>{children}</div>
+        <div>loading...</div>
       )}
     </div>
   );

@@ -1,59 +1,65 @@
-import Image from 'next/image';
-import cn from "classnames";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
-import styles from "./CheckboxComponent.module.scss";
+// import cn from "classnames";
 
-// import rocket from '../../styles/image/icon-rocket.png';
-// import name from '../../styles/image/icon-popular.png';
+// import styles from "./CheckboxComponent.module.scss";
 
-const CheckboxComponent = ({ appearance, children, ...props }) => {
+// import star from "../../styles/image/sidebar-icon/icon-star.png";
+// import person from "../../styles/image/sidebar-icon/icon-person.png";
+// import hearth from "../../styles/image/sidebar-icon/icon-hearth.png";
 
-  const {checkboxItems} = props
-  console.log(checkboxItems);
-  return (
-    <>
-      <div
-        className={cn(
-          "base",
-          appearance === "right-checkbox"
-            ? styles.checkboxRight
-            : styles.checkboxBase
-        )}
-      >
-        <label className="checkbox">
-          <input type="checkbox" />
-          <span>
+// import rocket from "../../styles/image/icon-rocket.png";
+// import popular from "../../styles/image/icon-popular.png";
+// import expireDate from "../../styles/image/icon-expire-date.png";
 
-            {/* <Image src={`${pro}`} width={30} height={30} /> */}
-          </span>
-        </label>
-        <label className="checkbox">
-          <input type="checkbox" />
-          <span></span>
-        </label>
-        <label className="checkbox">
-          <input type="checkbox" />
-          <span></span>
-        </label>
-      </div>
+// const CheckboxComponent = ({ appearance, children, ...props }) => {
+//   const [icon, setIcon] = useState({});
+//   const baseComponent = {rocket, popular, expireDate};
+//   const leftComponent = {star, hearth, person};
 
-      <style jsx>{`
+//   console.log(icon);
+//   useEffect(() => {
+//     !appearance
+//       ? setIcon((prev) => {
+//           {...baseComponent}
+//         })
+//       : setIcon((prev) => {
+//           [...leftComponent];
+//         });
+//   }, []);
 
-        .base .checkbox span {
-          width: 20px;
-          height: 20px;
-          border: 1px solid #ddd;
-        }
+//   return (
+//     <>
+//       <div
+//         className={cn(
+//           "base",
+//           !appearance ? styles.checkboxRight : styles.checkboxBase
+//         )}
+//       >
+//         <label className="checkbox">
+//           <input type="checkbox" />
+//           <span>{/* <Image src={star} width={20} height={20} /> */}</span>
+//         </label>
+//         <label className="checkbox">
+//           <input type="checkbox" />
+//           <span></span>
+//         </label>
+//         <label className="checkbox">
+//           <input type="checkbox" />
+//           <span></span>
+//         </label>
+//       </div>
 
+//       <style jsx>{`
+//         .base .checkbox span {
+//           width: 20px;
+//           height: 20px;
+//           border: 1px solid #ddd;
+//         }
+//       `}</style>
+//     </>
+//   );
+// };
 
-
-          
-
-
-
-        `}</style>
-    </>
-  );
-};
-
-export default CheckboxComponent;
+// export default CheckboxComponent;

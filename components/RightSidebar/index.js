@@ -1,6 +1,8 @@
 import Card from "../Card";
 
+
 const RightSideBar = ({ posts }) => {
+
   return (
     <div className="right-sidebar">
           {posts.map((post, pos) => {
