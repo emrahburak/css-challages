@@ -6,7 +6,7 @@ const MainContent = ({posts,checkboxItems}) => {
   return (
     <main className="main-content">
       <Banner />
-      <CheckboxComponent/>
+      <CheckboxComponent appearance={true} />
       {[...Array(2)].map((index, pos) => (
         <Card key={pos} status={"main-content"} />
       ))}
