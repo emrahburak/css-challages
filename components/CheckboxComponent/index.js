@@ -20,28 +20,10 @@ const initialState = {
 };
 
 const CheckboxComponent = ({ appearance, children, ...props }) => {
-  //   const [icon, setIcon] = useState({ ...initialState });
-  //   const [iconStyle, setIconStyle] = useState({ width: 0, height: 0 });
-  //   const baseComponent = {
-  //     iconOne: rocket,
-  //     iconTwo: popular,
-  //     iconThree: expireDate,
-  //   };
-  //   const leftComponent = { iconOne: star, iconTwo: hearth, iconThree: person };
-
-  //   useEffect(() => {
-  //     appearance === false
-  //       ? (
-  //         //   setIcon({...initialState}),
-  //           setIcon({ ...leftComponent }),
-  //         setIconStyle({ width: 20, height: 20 }),
-  //         console.log("Left: ", icon.iconOne))
-  //       : (
-  //         //   setIcon({...initialState}),
-  //           setIcon({ ...baseComponent }),
-  //         setIconStyle({ width: 50, height: 30 }),
-  //         console.log("Base: ", icon.iconOne));
-  //   }, []);
+  const base_width = "190";
+  const base_height = "51";
+  const width = "20";
+  const height = "20";
 
   return (
     <>
@@ -53,63 +35,72 @@ const CheckboxComponent = ({ appearance, children, ...props }) => {
       >
         {appearance === false ? (
           <>
-            <label className="checkbox">
-              <input type="checkbox" />
-              <span>
-                <Image src={star} layout="fill" objectFit="contain" />
-              </span>
-            </label>
-            <label className="checkbox">
-              <input type="checkbox" />
-              <span>
-                <Image src={person} layout="fill" objectFit="cover" />
-              </span>
-            </label>
-            <label className="checkbox">
-              <input type="checkbox" />
-              <span>
-                <Image src={hearth} layout="fill" objectFit="cover" />
-              </span>
-            </label>
+            <div className={styles.checkboxRight}>
+              <label className="checkbox">
+                <input type="checkbox" />
+                <span>
+                  {/* <Image src={star} width={width} height={height} /> */}
+                </span>
+              </label>
+              <label className="checkbox">
+                <input type="checkbox" />
+                <span>
+                  {/* <Image src={person} width={width} height={height} /> */}
+                </span>
+              </label>
+              <label className="checkbox">
+                <input type="checkbox" />
+                <span>
+                  {/* <Image src={hearth} width={width} height={height} /> */}
+                </span>
+              </label>
+            </div>
           </>
         ) : (
           <>
-            <label className="checkbox">
-              <input type="checkbox" />
-              <span>
-                {/* <Image src={`${icon.iconOne.src}`} width={icon.iconOne.width} height={icon.iconOne.height} /> */}
-              </span>
-            </label>
-            <label className="checkbox">
-              <input type="checkbox" />
-              <span>
-                {/* <Image
-              src={`${icon.iconTwo.src}`}
-              width={icon.iconTwo.width}
-              height={icon.iconTwo.height}
-            /> */}
-              </span>
-            </label>
-            <label className="checkbox">
-              <input type="checkbox" />
-              <span>
-                {/* <Image
-              src={`${icon.iconThree.src}`}
-              width={icon.iconThree.width}
-              height={icon.iconThree.height}
-            /> */}
-              </span>
-            </label>
+            <div className={styles.checkboxBase}>
+              <label className="checkbox">
+                <input type="checkbox" />
+                <span>
+                  {/* <Image src={rocket} width={base_width} height={base_height} /> */}
+                </span>
+              </label>
+              <label className="checkbox">
+                <input type="checkbox" />
+                <span>
+                  {/* <Image
+                    src={popular}
+                    width={base_width}
+                    height={base_height}
+                  /> */}
+                </span>
+              </label>
+              <label className="checkbox">
+                <input type="checkbox" />
+                <span>
+                  {/* <Image
+                    src={expireDate}
+                    width={base_width}
+                    height={base_height}
+                  /> */}
+                </span>
+              </label>
+            </div>
           </>
         )}
       </div>
 
       <style jsx>{`
-          .checkbox span {
-              position:relative;
-              width:30px;
-              height:30px;
-          }
+        .checkbox {
+          position:relative;
+        }
+
+        .checkbox input {
+          position: absolute;
+          left:-9999px;
+        }
+        
+
 
         }
       `}</style>
